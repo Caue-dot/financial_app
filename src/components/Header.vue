@@ -5,10 +5,18 @@
 
 <header>
     <header class="header">
-        <h1 class="app-name"> <span class="app-name-color">Fin</span>App</h1>
-        <h1 class="title">
-           Painel <span class="title-color">Financeiro</span>
-        </h1>
+        <div class="main-title-container">
+                <h1 class="title">
+                   Painel <span class="title-color">Transações</span>
+                </h1>
+        </div>
+        <div class="user-info-container">
+            <img class="user-pfp" src="@/assets/img/placeholder/image-placeholder.jpg">
+            <div>
+                <div class="user-name">Nome Nome</div>
+                <div class="user-description">Test Test</div>
+            </div>
+        </div>
     </header>
 
 </header>

@@ -1,4 +1,7 @@
-import './assets/main.css'
+import '@/assets/css/main.css'
+import '@/assets/css/sidebar.css'
+import '@/assets/css/header.css'
+
 import 'primeicons/primeicons.css'
 import { createApp } from 'vue'
 import App from './App.vue'

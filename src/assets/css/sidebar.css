@@ -1,34 +1,43 @@
 
-*{
-    font-family: roboto, arial;
-    line-height: 1;
-}
-body{
-    background-color: rgb(247, 247, 247);
-}
-
 .sidebar{
-    z-index: 99;
+    z-index: 101;
     width: 220px;
     position: fixed;
     background-color: white;
     top:0;
     bottom: 0;
     left:0;
-
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    padding-left: 20px;
-
+    
+    
 }
 
 
 
+.app-name-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app-name{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    margin:0;
+    color: rgb(61, 61, 61);
+}
+
+.app-name-color{
+    color:rgb(25, 121, 25);
+}
+
+
 .nav-buttons{
-    margin-top: 120px;
-    box-sizing: border-box;
+    margin-top: 40px;
     width: 200px;
 }
 
@@ -71,33 +80,3 @@ body{
 }
 
 
-.header{
-    z-index: 100;
-    background-color: white;
-    position: fixed;
-    height: 90px;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-}
-
-.app-name{
-    font-size: 30px;
-    width: 240px;
-    text-align: center;
-}
-
-.app-name-color{
-    color:rgb(25, 121, 25);
-}
-
-.title{
-    word-spacing: -3px;
-    margin-left: 24px;
-}
-
-.title-color{
-    color:#007ec7;
-}
