@@ -35,6 +35,15 @@
     color:rgb(25, 121, 25);
 }
 
+.sidebar-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 85px;
+    bottom: 40px;
+}
+
 
 .nav-buttons{
     margin-top: 40px;

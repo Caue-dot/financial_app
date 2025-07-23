@@ -1,31 +1,44 @@
 
 .layout{
     background-color: rgb(255, 255, 255);
-    height: 100vh;
+    height: 100%;
     width: 70%;
-    border-radius: 50px;
-
+    border-radius: 30px;
+    min-width: 500px;
     box-shadow: 0px 0px 10px 7px rgb(230, 230, 230);
 
-    padding: 70px;
+    padding: 50px;
+    display: grid;
+    gap: 10px;
 }
+
+.caption{
+    display: grid;
+    grid-template-columns: 1fr 104px 173px 116px;
+    margin-bottom: 10px;
+    margin-left: 22px;
+}
+
 
 .transaction-container{
     display: flex;
     flex-direction: column;
-    gap:  15px;
+    gap:  10px;
     
 }
 
 .transaction{
-    background-color: #F0F0F0;
-    border-radius: 10px;
     padding: 18px;
     display: flex;
     flex: 1;
     justify-content: space-between;
     
     
+}
+
+.transaction{
+    background-color: #F0F0F0;
+    border-radius: 10px;
 }
 
 .transaction-info{

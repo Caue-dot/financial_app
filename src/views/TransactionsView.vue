@@ -1,5 +1,6 @@
 <script setup>
-import TransactionCard from '@/components/TransactionCard.vue';
+
+import TransactionListing from '@/components/TransactionListing.vue';
 
 </script>
 
@@ -10,26 +11,17 @@ import TransactionCard from '@/components/TransactionCard.vue';
 <template>
   <main>
     <div class="layout">
-      <div class="transaction-container"> 
-          <TransactionCard 
-          name="Mercado"
-          value="100.21"
-          type="Gasto"
-          date="2025-06-21"
-          />
-          <TransactionCard
-          name="Bolsa família"
-          value="600"
-          type="Renda"
-          date="2025-06-22"
-          />
-          <TransactionCard
-          name="Chuveiro"
-          value="100.54"
-          type="Gasto"
-          date="2025-06-23"
-          />
+      <div class="caption">
 
+        <div>Nome</div>
+        <div>Tipo</div>
+        <div>Valor</div>
+        <div>Data</div>
+        
+        
+      </div>
+      <div class="transaction-container">
+        <TransactionListing />
       </div>
     </div>
   </main>
