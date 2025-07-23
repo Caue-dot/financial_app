@@ -10,9 +10,9 @@ const state = reactive({
 
 onMounted(async () =>{
     try{
-        const response = await axios.get("http://localhost/api/transactions", {
+        const response = await axios.get("https://ef5ze5exptsm6jarkueqerqlam0xshdu.lambda-url.sa-east-1.on.aws/api/transactions", {
             headers: {
-                Authorization: 'Bearer 5|d11lJh4Gb62jAEmWyRZf3lbMqGimCuzCddj52m56c7a1c255',
+                Authorization: 'Bearer 1|T6HOSkleI28P0mMfnMFP2rvazUy9CJZuMzBVUoF6975d6eed',
             }
         });
         state.transactions = response.data.data;
