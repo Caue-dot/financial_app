@@ -9,20 +9,43 @@ import TransactionListing from '@/components/TransactionListing.vue';
 </style>
 
 <template>
-  <main>
-    <div class="layout">
-      <div class="caption">
+  <main class="transactions-main">
+    <div class="layout-container">
 
-        <div>Nome</div>
-        <div>Tipo</div>
-        <div>Valor</div>
-        <div>Data</div>
-        
-        
+      <span class="transactions-box-1">
+        <div class="layout">
+          <div class="caption">
+
+            <div>Nome</div>
+            <div>Tipo</div>
+            <div>Valor</div>
+            <div>Data</div>
+
+
+          </div>
+          <div class="transaction-container">
+            <TransactionListing />
+          </div>
+        </div>
+      </span>
+
+      <div class="transaction-side-boxes">
+        <span class="transactions-box-2">
+          <div class="layout">
+            <div class="transaction-add-title">Adicionar Transação</div>
+            <RouterLink class="transaction-add-link">Adicionar</RouterLink>
+          </div>
+        </span>
+        <span class="transactions-box-2">
+          <div class="layout">
+            <div class="transaction-add-title">Adicionar Transação</div>
+            <RouterLink class="transaction-add-link">Adicionar</RouterLink>
+          </div>
+        </span>
       </div>
-      <div class="transaction-container">
-        <TransactionListing />
-      </div>
+
     </div>
+
+
   </main>
 </template>

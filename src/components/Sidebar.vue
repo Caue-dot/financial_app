@@ -12,7 +12,10 @@ const isActiveLink = (routePath) =>{
 <template>
     <nav class="sidebar">
         <div class="app-name-container">
-            <h1 class="app-name"> <span class="app-name-color">Fin</span>App</h1>
+            <RouterLink
+            to="/">
+                <h1 class="app-name"> <span class="app-name-color">Fin</span>App</h1>
+            </RouterLink>
         </div>
 
         <div class="sidebar-content-container">

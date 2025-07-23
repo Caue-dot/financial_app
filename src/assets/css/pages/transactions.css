@@ -1,22 +1,39 @@
 
-.layout{
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    width: 70%;
-    border-radius: 30px;
-    min-width: 500px;
-    box-shadow: 0px 0px 10px 7px rgb(230, 230, 230);
 
-    padding: 50px;
+.transactions-main{
+    width: 100%;
+}
+
+.layout-container{
+    display: grid;
+    grid-template-columns: 2fr 300px;
+    gap: 20px;
+}
+.transactions-box-1 .layout{
+
+    min-width: 500px;
     display: grid;
     gap: 10px;
 }
 
+
+.transactions-box-2 .layout{
+    max-width: 300px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+   
+}
+
+
 .caption{
     display: grid;
-    grid-template-columns: 1fr 104px 173px 116px;
-    margin-bottom: 10px;
+    grid-template-columns: 1fr 86px 158px 116px;
     margin-left: 22px;
+    align-items: center;
+
 }
 
 
@@ -28,12 +45,12 @@
 }
 
 .transaction{
-    padding: 18px;
+    padding: 15px;
     display: flex;
     flex: 1;
     justify-content: space-between;
-    
-    
+    align-items: center;
+
 }
 
 .transaction{
@@ -44,7 +61,7 @@
 .transaction-info{
     display: grid;
     grid-template-columns: 50px 1fr 1fr;
-    gap: 20px
+    gap: 3px
 }
 
 .transaction-type{
@@ -52,9 +69,7 @@
 
 }
 
-.transaction-date{
 
-}
 
 .transaction-value-expense, .transaction-value-income{
     max-width: 120px;
@@ -68,3 +83,32 @@
     color: green;
 }
 
+.transaction-side-boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.transaction-add-title{
+    text-align: center;
+    font-size: 20px;
+    color:#525252;
+    font-weight: bold;
+}
+
+.transaction-add-link{
+    display: block;
+    padding: 11px 40%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #0182CC;
+    color: rgb(255, 255, 255);
+}
