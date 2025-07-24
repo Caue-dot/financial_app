@@ -13,9 +13,9 @@ const loginForm = reactive({
 
 
 const registerForm = reactive({
-    name: 'a',
-    email: 'a',
-    password: '424',
+    name: '',
+    email: '',
+    password: '',
 })
 
 
@@ -83,13 +83,13 @@ const handleLogin = async () => {
                 <form @submit.prevent="handleRegister" class="form-inputs" >
                     <div class="auth-inputs">
                         <label for="name">Nome</label>
-                        <input v-model="registerForm.name" class="auth-input" id="name" placeholder="Name">
+                        <input v-model="registerForm.name" class="auth-input" id="name" placeholder="Nome">
                         <label for="email">Email</label>
                         <input v-model="registerForm.email"
                         class="auth-input" id="email"placeholder="Email">
                         <label for="password">Senha</label>
                         <input  v-model="registerForm.password" 
-                        type="password" class="auth-input" id="password" placeholder="Password">
+                        type="password" class="auth-input" id="password" placeholder="Senha">
                     </div>
 
                     <button>Cadastrar-se</button>

@@ -4,7 +4,12 @@ import { RouterLink, useRoute } from 'vue-router';
 
 const isActiveLink = (routePath) =>{
     const route = useRoute();
-    return route.path === routePath;
+    
+    if(routePath != "/"){
+        return route.path.includes(routePath);
+    }
+    return route.path == routePath;  
+
 }
 
 </script>
@@ -27,26 +32,26 @@ const isActiveLink = (routePath) =>{
                     <div class="nav-button-text">Painel</div>
                 </RouterLink>
     
-                <RouterLink :class="isActiveLink('/transacoes') ? 'nav-button' : 'nav-button-disabled'"
-                to="/transacoes">
+                <RouterLink :class="isActiveLink('/transactions') ? 'nav-button' : 'nav-button-disabled'"
+                to="/transactions">
                     <i class="pi pi-dollar icon"> </i>
                     <div class="nav-button-text">Transações</div>
                 </RouterLink>
-                <RouterLink :class="isActiveLink('/relatorios') ? 'nav-button' : 'nav-button-disabled'"
-                to="/relatorios">
+                <RouterLink :class="isActiveLink('/reports') ? 'nav-button' : 'nav-button-disabled'"
+                to="/reports">
                     <i class="pi pi-receipt icon"> </i>
                     Relatórios
                 </RouterLink>
-                <RouterLink :class="isActiveLink('/categorias') ? 'nav-button' : 'nav-button-disabled'"
-                to="/categorias">
+                <RouterLink :class="isActiveLink('/categories') ? 'nav-button' : 'nav-button-disabled'"
+                to="/categories">
                     <i class="pi pi-tags icon"> </i>
                     Categorias
                 </RouterLink>
             </div>
     
             <div class="nav-buttons">
-                <RouterLink :class="isActiveLink('/usuario') ? 'nav-button' : 'nav-button-disabled'"
-                to="/usuario">
+                <RouterLink :class="isActiveLink('/user') ? 'nav-button' : 'nav-button-disabled'"
+                to="/user">
                     <i class="pi pi-user icon"> </i>
                     <div class="nav-button-text">Conta</div>
                 </RouterLink>

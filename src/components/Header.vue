@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router';
                 </h1>
         </div>
         <RouterLink
-        to="/usuario">
+        to="/user">
         <div class="user-info-container">
                 <img class="user-pfp" src="@/assets/img/placeholder/image-placeholder.jpg">
                 <div>

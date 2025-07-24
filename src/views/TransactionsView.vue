@@ -13,22 +13,26 @@ const state = reactive({
 });
 
 
+const loadTransactions = async () =>{
+  try {
+    const response = await axios.get("/api/transactions", {
+      headers: {
+        Authorization: `Bearer ${localStorage.token}`,
+      }
+    });
+    state.transactions = response.data.transactions;
+    state.totalExpense = response.data.totalExpense;
+    state.totalIncome = response.data.totalIncome;
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error fetching transactions: ', error);
+  } finally {
+    state.isLoading = false;
+  }
+}
+
 onMounted(async () =>{
-    try{
-        const response = await axios.get("/api/transactions", {
-            headers: {
-                Authorization: `Bearer ${localStorage.token}`,
-            }
-        });
-        state.transactions = response.data.transactions;
-        state.totalExpense = response.data.totalExpense;
-        state.totalIncome = response.data.totalIncome;
-        console.log(response.data);
-    }catch (error){
-        console.error('Error fetching transactions: ', error);
-    }finally{
-        state.isLoading = false;
-    }
+  loadTransactions();
 })
 
 </script>
@@ -55,6 +59,7 @@ onMounted(async () =>{
           <div class="transaction-container">
             <TransactionListing 
             :transactions="state.transactions"
+            @deleted="loadTransactions"
             />
           </div>
         </div>
@@ -71,7 +76,7 @@ onMounted(async () =>{
         <span class="transactions-box-2">
           <div class="layout">
             <div class="transaction-add-title">Adicionar Transação</div>
-            <RouterLink class="transaction-add-link">Adicionar</RouterLink>
+            <RouterLink to="/transactions/add" class="transaction-add-link">Adicionar</RouterLink>
           </div>
         </span>
       </div>

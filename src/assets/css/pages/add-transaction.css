@@ -1,0 +1,102 @@
+
+.add-transaction-main{
+    display: flex;
+    justify-content: center;
+}
+
+.add-transaction-main .layout{
+  
+
+    flex: 0.75;
+}
+
+.transaction-add-title{
+   font-size: 20px;
+   margin-bottom: 24px;
+   color:#525252;
+   font-weight: bold;
+}
+
+.first-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.description-area{
+    font-size: 13.5px;
+    resize: vertical;
+}
+
+.second-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    margin-bottom: 17px;
+}
+
+
+
+
+.add-transaction-inputs input,
+.add-transaction-inputs textarea,
+.transaction-add-type{
+    padding: 12px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(189, 189, 189);
+    border-width: 1px;
+    background-color: #F0F0F0;
+    border: none;
+
+}
+
+.add-transaction-inputs label{
+    margin-bottom: 6px;
+    color:#3a3a3a;
+}
+
+.recurrent-checkbox{
+    align-self: flex-start;
+    margin-right: 10px;
+    margin-bottom: 60px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.transaction-type-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.transaction-add-type{
+    flex: 1;
+}
+
+
+.create-button-container{
+    display: flex;
+    justify-content: center;
+}
+.create-button{
+ 
+    padding: 11px 30%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #0182CC;
+    color: rgb(255, 255, 255);
+}
