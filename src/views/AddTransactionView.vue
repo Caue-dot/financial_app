@@ -44,7 +44,7 @@ const handleSubmit =  async () => {
 </script>
 
 <style scoped>
-@import "@/assets/css/pages/add-transaction";
+@import "@/assets/css/pages/add-edit-transaction";
 </style>
 
 
