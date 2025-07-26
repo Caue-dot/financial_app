@@ -33,12 +33,15 @@ const toggleManageWindow = () => {
 
 <template>
 
-<div class="transaction">
-    <div class="transaction-name">{{ name }}</div>
+
+    <div class="transaction">
+        <RouterLink :to="`transactions/${id}`">
+            <div class="transaction-name">{{ name }}</div>
+        </RouterLink>
         <div class="transaction-info">
             <div class="transaction-type">{{ type == "E" ? "Gasto" : "Renda" }}</div>
-            <div v-if="type=='E' "class="transaction-value-expense">-{{value}}</div>
-            <div v-else-if="type=='I'" class="transaction-value-income">+{{ value }} </div>
+            <div v-if="type == 'E'" class="transaction-value-expense">-{{ value }}</div>
+            <div v-else-if="type == 'I'" class="transaction-value-income">+{{ value }} </div>
             <div class="transaction-date">{{ date }}</div>
             <div class="dots">
                 <button @click="toggleManageWindow" class="dots-button">
@@ -49,15 +52,16 @@ const toggleManageWindow = () => {
 
 
         <div v-show="showWindow" class="transaction-manage">
-            <RouterLink :to="'transactions/edit/'+id" class="transaction-manage-element">
-                <i class="pi pi-pencil transaction-manage-icon"></i>Editar Transação 
+            <RouterLink :to="'transactions/edit/' + id" class="transaction-manage-element">
+                <i class="pi pi-pencil transaction-manage-icon"></i>Editar Transação
             </RouterLink>
             <button @click="handleDelete" class="transaction-manage-element">
                 <i class="pi pi-trash transaction-manage-icon"></i> Deletar Transação
             </button>
 
         </div>
-</div>
+    </div>
+
 
 
 </template>

@@ -1,0 +1,96 @@
+
+.transaction-main{
+    display: flex;
+    gap: 15px
+}
+
+
+
+.box-1 {
+    flex: 3;
+}
+
+.transaction-title{
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.transaction-income, .transaction-expense{
+    margin-bottom: 15px;
+}
+
+.transaction-income{
+    color: green;
+}
+
+.transaction-expense{
+    color:red;
+}
+
+.transaction-category-title{
+    margin-bottom: 30px;
+}
+
+.transaction-bold{
+    font-weight: bold;
+}
+
+.transaction-description-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recurrency{
+    color: initial;
+
+}
+p{
+    margin: 0px;
+}
+
+
+.description-container{
+    background-color: rgb(240, 240, 240);
+    padding: 19px;
+    width: 50%;
+    margin-top: 7px;
+    border-radius: 10px;
+}
+
+
+.box-2 {
+    flex: 2;
+}
+
+
+
+.manage-buttons-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.manage-button-edit, .manage-button-delete{
+ 
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0182CC;
+    color: rgb(255, 255, 255);
+}
+
+
+.manage-button-edit:hover{
+    background-color:#42b8fc;
+}
+
+.manage-button-delete:hover{
+    background-color: red;
+}

@@ -4,6 +4,8 @@ import DashboardView from '@/views/DashboardView.vue'
 import AuthView from '@/views/AuthView.vue'
 import AddTransactionView from '@/views/AddTransactionView.vue'
 import EditTransactionView from '@/views/EditTransactionView.vue'
+import TransactionView from '@/views/TransactionView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +19,11 @@ const router = createRouter({
       path: '/transactions',
       name: 'transactions',
       component: TransactionsView,
+    },
+    {
+      path: '/transactions/:id',
+      name: 'transaction',
+      component: TransactionView,
     },
     {
       path: '/transactions/add',
