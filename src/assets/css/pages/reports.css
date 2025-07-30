@@ -1,0 +1,80 @@
+
+
+.reports-main{
+    display: flex;
+    gap: 20px
+}
+
+.first-section{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    flex: 2;
+}
+
+.gray-title{
+    margin-bottom: 10px;
+}
+
+
+.second-section{
+    flex: 1;
+}
+
+
+.report-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-3 .layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.report-value-income{
+    color: green;
+}
+
+.report-value-expense{
+    color:red;
+}
+
+
+
+
+/* ReportCard */
+
+.reports-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.caption{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    flex: 1;
+    margin: 0;
+}
+
+
+.side-info{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.side-info div{
+    width: 100px;
+}
+
+
+.report-link{
+    text-decoration: underline;
+    color: #0000ee;
+}

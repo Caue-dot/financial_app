@@ -4,8 +4,9 @@
 <script setup>
 import axios from 'axios';
 import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
 
-
+const router = useRouter();
 const loginForm = reactive({
     name: '',
     password: '',
@@ -42,6 +43,7 @@ const handleLogin = async () => {
 
     try{
         const response = await axios.post('/api/user/login', loginUser);
+        router.push('/')
         localStorage.token = response.data.token;
     }catch(error){
         console.error('Error logging user: ', error)

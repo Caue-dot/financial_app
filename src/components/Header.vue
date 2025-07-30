@@ -1,6 +1,13 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { computed, onMounted } from 'vue';
+import { RouterLink, useRoute } from 'vue-router';
 
+const route = useRoute()
+const headerTitle = computed(() => route.meta.title || "Painel Financeiro")
+
+onMounted( ()=>{
+    console.log("mounted");
+})
 </script>
 
 
@@ -10,11 +17,11 @@ import { RouterLink } from 'vue-router';
     <header class="header">
         <div class="main-title-container">
                 <h1 class="title">
-                   Painel <span class="title-color">Transações</span>
+                    {{headerTitle }}
                 </h1>
         </div>
         <RouterLink
-        to="/user">
+        :to="token ? '/user' : '/user/auth'">
         <div class="user-info-container">
                 <img class="user-pfp" src="@/assets/img/placeholder/image-placeholder.jpg">
                 <div>

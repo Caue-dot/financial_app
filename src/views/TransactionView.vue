@@ -62,7 +62,6 @@ onMounted(() => {
 
 <style scoped>
 @import "@/assets/css/pages/transaction.css";
-@import "@/assets/css/pages/transactions.css";
 </style>
 
 <template>

@@ -1,15 +1,31 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
+import axios from 'axios';
+import { ref } from 'vue';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 
-
+const route = useRoute();
+const router = useRouter();
 const isActiveLink = (routePath) =>{
-    const route = useRoute();
-    
+
+
     if(routePath != "/"){
         return route.path.includes(routePath);
     }
     return route.path == routePath;  
 
+}
+
+const token = ref(localStorage.token);
+
+const handleLogout = () =>{
+    try{
+        axios.post('user/logout');
+        localStorage.removeItem('token')
+        token.value = null;
+        router.push('/user/auth')
+    }catch(error){
+        console.log('Error trying to logout: ', error)
+    }
 }
 
 </script>
@@ -51,10 +67,15 @@ const isActiveLink = (routePath) =>{
     
             <div class="nav-buttons">
                 <RouterLink :class="isActiveLink('/user') ? 'nav-button' : 'nav-button-disabled'"
-                to="/user">
+                :to=" token !=  '' ? '/user' : '/user/auth'">
                     <i class="pi pi-user icon"> </i>
                     <div class="nav-button-text">Conta</div>
                 </RouterLink>
+                <button v-if="token" @click="handleLogout" class="nav-button-disabled"
+                :to=" token !=  null ? '/user' : '/user/auth'">
+                    <i class="pi pi-sign-out icon"> </i>
+                    <div class="nav-button-text">Sign out</div>
+                </button>
             </div>
         </div>
     </nav>
